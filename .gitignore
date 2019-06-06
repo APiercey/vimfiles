@@ -1,0 +1,8 @@
+*.log
+*.swp
+.local/share/nvim/swap/*
+.local/share/nvim/log
+.local/share/nvim/shada/main.shada
+.config/coc/*.json
+.config/nvim/.netrwhist
+.vim/plugged/
