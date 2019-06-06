@@ -1,0 +1,37 @@
+call plug#begin('~/.vim/plugged')
+Plug 'itchyny/lightline.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'tpope/vim-fugitive'
+Plug 'mattreduce/vim-mix'
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+Plug 'mhinz/vim-startify'
+Plug 'tpope/vim-surround'
+Plug 'jiangmiao/auto-pairs'
+Plug 'ruanyl/vim-gh-line'
+
+Plug 'tpope/vim-endwise'
+Plug 'easymotion/vim-easymotion'
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-fuzzy.vim'
+Plug 'haya14busa/incsearch-easymotion.vim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'luochen1990/rainbow'
+
+Plug 'drewtempelmeyer/palenight.vim'
+Plug 'mbbill/undotree'
+Plug 'tpope/vim-commentary'
+Plug 'chrisbra/Colorizer'
+Plug 'myusuf3/numbers.vim'
+Plug 'idanarye/vim-merginal'
+Plug 'AndrewRadev/switch.vim'
+Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
+Plug 'ryanoasis/vim-devicons'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+call plug#end() 
+
