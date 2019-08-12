@@ -13,6 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ruanyl/vim-gh-line'
 
+Plug 'gabrielelana/vim-markdown'
 Plug 'tpope/vim-endwise'
 Plug 'easymotion/vim-easymotion'
 Plug 'haya14busa/incsearch.vim'
@@ -32,6 +33,7 @@ Plug 'AndrewRadev/switch.vim'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
+Plug 'yegappan/greplace'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 call plug#end() 
 
