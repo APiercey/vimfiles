@@ -48,8 +48,9 @@ function! FZFFileOpen()
   endif
 endfunction
 
-nnoremap <silent> <C-b> :call FZFOpen(':Buffers')<CR>
 nnoremap <silent> <C-f> :call FZFOpen(':Rg!')<CR>
 nnoremap <silent> <C-s> :call FZFOpen(':Snippets')<CR>
-nnoremap <silent> <C-l> :call FZFOpen(':BLines')<CR>
 nnoremap <silent> <C-p> :call FZFFileOpen()<CR>
+nnoremap zb :call FZFOpen(':Buffers')<CR>
+nnoremap zl :call FZFOpen(':BLines')<CR>
+

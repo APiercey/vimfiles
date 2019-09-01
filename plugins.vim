@@ -8,7 +8,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'mattreduce/vim-mix'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ruanyl/vim-gh-line'
@@ -34,6 +33,8 @@ Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'yegappan/greplace'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 call plug#end() 
 
