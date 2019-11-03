@@ -38,19 +38,18 @@ function! FZFOpen(command_str)
   exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
 
-nnoremap <expr> <space>o () ? ':Files' : ':GFiles')."\<cr>"
-
 function! FZFFileOpen()
   if(len(system('git rev-parse')))
-    nnoremap <silent> <C-p> :call FZFOpen(':Files')<CR>
+    :call FZFOpen(':Files')
   else
-    nnoremap <silent> <C-p> :call FZFOpen(':GFiles')<CR>
+    :call FZFOpen(':GFiles')
   endif
 endfunction
 
 nnoremap <silent> <C-f> :call FZFOpen(':Rg!')<CR>
 nnoremap <silent> <C-s> :call FZFOpen(':Snippets')<CR>
 nnoremap <silent> <C-p> :call FZFFileOpen()<CR>
+nnoremap zp :call FZFFileOpen()<CR>
 nnoremap zb :call FZFOpen(':Buffers')<CR>
 nnoremap zl :call FZFOpen(':BLines')<CR>
 

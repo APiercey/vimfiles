@@ -1,34 +1,56 @@
+set nocompatible
 set termguicolors
 set encoding=UTF-8
 set signcolumn=yes
 set number 
+set relativenumber
 set expandtab
 set ignorecase
 set smartcase
 set cursorline
 set guioptions=
-syntax enable
 set mouse=a
-autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
-autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 set shiftwidth=2 
 set tabstop=2
 set hidden
 set encoding=UTF-8
 set noshowmode
+set synmaxcol=9999
+set clipboard=unnamedplus
+set so=3
+set lazyredraw
+
+syntax on
+
 highlight Comment cterm=italic
 highlight Comment gui=italic
+
+autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+
 filetype plugin on
-set clipboard=unnamedplus
+
 
 so ~/vimfiles/plugins.vim
 so ~/vimfiles/fzf.vim 
 so ~/vimfiles/coc.vim 
 so ~/vimfiles/ale.vim 
+so ~/vimfiles/text_mode.vim
 
 "
 " MISC
 map <ESC> :noh<CR>
+nnoremap j gj
+nnoremap k gk
+
+" Return to last edit when opening
+augroup last_edit
+    autocmd!
+      autocmd BufReadPost *
+             \ if line("'\"") > 0 && line("'\"") <= line("$") |
+             \   exe "normal! g`\"" |
+             \ endif
+      augroup END
 
 " FUNCTION BAR
 nnoremap <F8> :Colors<CR>
@@ -51,11 +73,18 @@ let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
 
 " UTIL SNIPS
 "
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsEditSplit="vertical"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsEditSplit="vertical"
 
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 "
 " THEMES
 
@@ -91,7 +120,12 @@ function! s:config_easyfuzzymotion(...) abort
   \ }), get(a:, 1, {}))
 endfunction
 
-nnoremap <NL> i<CR><ESC>
+call yankstack#setup()
+nmap Y y$
+nmap [p <Plug>yankstack_substitute_older_paste
+nmap ]p <Plug>yankstack_substitute_newer_paste
+" I gotta find a new mapping for this
+nnoremap <NL> i<CR><ESC> 
 nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
 nmap <c-n> :NERDTreeToggle<CR>
@@ -102,7 +136,6 @@ map zg/ <Plug>(incsearch-easymotion-stay)
 noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 "
 " FUGITIVE
-
 map <Leader>gs :Gstatus<CR>
 "
 " NERDTree
