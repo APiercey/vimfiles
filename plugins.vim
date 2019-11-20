@@ -11,7 +11,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ruanyl/vim-gh-line'
+  Plug 'francoiscabrol/ranger.vim'
+  Plug 'rbgrouleff/bclose.vim'
 
+  Plug 'nanotech/jellybeans.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   Plug 'gabrielelana/vim-markdown'
@@ -22,7 +25,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'haya14busa/incsearch-easymotion.vim'
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
-  " Plug 'luochen1990/rainbow'
+  Plug 'tpope/vim-obsession'
   
   Plug 'terryma/vim-expand-region'
   Plug 'maxbrunsfeld/vim-yankstack'
@@ -31,7 +34,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-commentary'
   Plug 'chrisbra/Colorizer', { 'on':  'Colors' }
   Plug 'AndrewRadev/switch.vim'
-  Plug 'w0rp/ale'
+  Plug 'dense-analysis/ale'
   Plug 'tpope/vim-fugitive'
 
   Plug 'reedes/vim-colors-pencil'

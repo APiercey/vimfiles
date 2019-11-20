@@ -71,13 +71,6 @@ let g:rainbow_conf = {
 " Github Open
 let g:gh_open_command = 'fn() { echo "$@" | pbcopy; }; fn '
 
-" UTIL SNIPS
-"
-" let g:UltiSnipsJumpForwardTrigger="<tab>"
-" let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
-" let g:UltiSnipsExpandTrigger="<tab>"
-" let g:UltiSnipsEditSplit="vertical"
-
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
@@ -99,6 +92,7 @@ let g:lightline = {
         \   'fileformat': 'MyFileformat',
         \ }
 \ }
+
   
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
@@ -148,7 +142,13 @@ autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" | b# | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let NERDTreeShowHidden=1
 let NERDTreeMouseMode=2
+
 "
+" Ranger
+
+let g:NERDTreeHijackNetrw = 0 " add this line if you use NERDTree
+let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
+let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 " GitGutter
 
 let g:gitgutter_sign_added = '▎'

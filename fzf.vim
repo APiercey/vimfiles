@@ -52,4 +52,3 @@ nnoremap <silent> <C-p> :call FZFFileOpen()<CR>
 nnoremap zp :call FZFFileOpen()<CR>
 nnoremap zb :call FZFOpen(':Buffers')<CR>
 nnoremap zl :call FZFOpen(':BLines')<CR>
-
