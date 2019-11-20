@@ -1,3 +1,4 @@
 {
-  "elixir.pathToElixirLS": "~/dotfiles/elixir-ls/language_server.sh"
+  "elixir.pathToElixirLS": "~/dotfiles/elixir-ls/language_server.sh",
+  "diagnostic.enable": false
 }
