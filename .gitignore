@@ -6,3 +6,9 @@
 .config/coc/*.json
 .config/nvim/.netrwhist
 .vim/plugged/
+.config/coc/commands
+.config/coc/lists
+.config/coc/mru
+.config/coc/snippets-mru
+.config/nvim/after/*
+.config/coc/extensions/db.json
