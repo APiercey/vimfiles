@@ -1,4 +1,6 @@
 {
-  "elixir.pathToElixirLS": "~/dotfiles/elixir-ls/language_server.sh",
-  "diagnostic.enable": false
+  "diagnostic.enable": true,
+  "diagnostic.signOffset": 9999999,
+  "elixirLS.dialyzerEnabled": false,
+  "diagnostic.displayByAle": true
 }

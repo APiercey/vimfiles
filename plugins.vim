@@ -3,8 +3,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-  Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
+  " Plug 'Xuyuanp/nerdtree-git-plugin', { 'on':  'NERDTreeToggle' }
+  " Plug 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on':  'NERDTreeToggle' }
   Plug 'mattreduce/vim-mix', { 'for': 'elixir' }
   Plug '/usr/local/opt/fzf'
   Plug 'junegunn/fzf.vim'
@@ -17,7 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'nanotech/jellybeans.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
-  Plug 'gabrielelana/vim-markdown'
+  " Plug 'gabrielelana/vim-markdown'
   Plug 'tpope/vim-endwise'
   Plug 'easymotion/vim-easymotion'
   Plug 'haya14busa/incsearch.vim'
@@ -26,6 +26,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'SirVer/ultisnips'
   Plug 'honza/vim-snippets'
   Plug 'tpope/vim-obsession'
+  Plug 'tpope/vim-repeat'
+  " Plug 'dracula/vim', { 'as': 'dracula' }
   
   Plug 'terryma/vim-expand-region'
   Plug 'maxbrunsfeld/vim-yankstack'
@@ -33,11 +35,11 @@ call plug#begin('~/.vim/plugged')
   Plug 'mbbill/undotree', { 'on':  'UndotreeToggle' }
   Plug 'tpope/vim-commentary'
   Plug 'chrisbra/Colorizer', { 'on':  'Colors' }
-  Plug 'AndrewRadev/switch.vim'
+  " Plug 'AndrewRadev/switch.vim'
   Plug 'dense-analysis/ale'
   Plug 'tpope/vim-fugitive'
 
-  Plug 'reedes/vim-colors-pencil'
+  " Plug 'reedes/vim-colors-pencil'
   Plug 'airblade/vim-gitgutter'
   Plug 'ryanoasis/vim-devicons'
   Plug 'yegappan/greplace'
