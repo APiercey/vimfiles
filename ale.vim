@@ -14,8 +14,10 @@ let g:ale_fixers = {}
 
 let g:ale_elixir_elixir_ls_release = $ELIXIR_LS 
 let g:ale_elixir_credo_strict = 1
-let g:ale_linters.elixir = ['elixir-ls', 'credo']
-let g:ale_fixers.elixir = ['mix_format']
+let g:ale_linters.elixir = []
+let g:ale_fixers.elixir = []
+" let g:ale_linters.elixir = ['credo']
+" let g:ale_fixers.elixir = ['mix_format']
 
 let g:ale_fixers.rust = ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']
 " let g:ale_linters.rust   = ['rls']

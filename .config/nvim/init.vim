@@ -30,14 +30,19 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 filetype plugin on
 
-
 so ~/vimfiles/plugins.vim
 so ~/vimfiles/fzf.vim 
 so ~/vimfiles/coc.vim 
 so ~/vimfiles/ale.vim 
 so ~/vimfiles/text_mode.vim
 
-"
+" 
+" Vimwiki
+
+let wiki = {}
+let wiki.nested_syntaxes = {'elixir': 'elixir', 'c++': 'cpp'}
+
+
 " MISC
 map <ESC> :noh<CR>
 nnoremap j gj
@@ -85,6 +90,7 @@ let g:palenight_terminal_italics=1
 set background=dark
 colorscheme palenight
 hi Normal guibg=NONE ctermbg=NONE
+
 let g:lightline = { 
         \ 'colorscheme': 'palenight',
         \ 'component_function': {
@@ -93,7 +99,6 @@ let g:lightline = {
         \ }
 \ }
 
-  
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
@@ -101,9 +106,10 @@ endfunction
 function! MyFileformat()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
-
+"
 "
 " MOVEMENT
+
 function! s:config_easyfuzzymotion(...) abort
   return extend(copy({
   \   'converters': [incsearch#config#fuzzy#converter()],
@@ -149,6 +155,8 @@ let NERDTreeMouseMode=2
 let g:NERDTreeHijackNetrw = 0 " add this line if you use NERDTree
 let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+let g:ranger_map_keys = 0
+nmap - :Ranger<CR>
 " GitGutter
 
 let g:gitgutter_sign_added = '▎'
