@@ -60,7 +60,6 @@ augroup last_edit
 " FUNCTION BAR
 nnoremap <F8> :Colors<CR>
 nnoremap <F5> :UndotreeToggle<cr>
-map <F12> :NERDTreeFind<cr>
 nnoremap <silent> <F9> :call FZFOpen(':Commands')<CR>
 
 "
@@ -128,7 +127,6 @@ nmap ]p <Plug>yankstack_substitute_newer_paste
 nnoremap <NL> i<CR><ESC> 
 nnoremap <tab>   <c-w>w
 nnoremap <S-tab> <c-w>W
-nmap <c-n> :NERDTreeToggle<CR>
 nmap s <Plug>(easymotion-overwin-f2)
 map z/ <Plug>(incsearch-easymotion-/)
 map z? <Plug>(incsearch-easymotion-?)
@@ -137,22 +135,10 @@ noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
 "
 " FUGITIVE
 map <Leader>gs :Gstatus<CR>
-"
-" NERDTree
-
-let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-let g:NERDTreeWinSize=60
-let g:NERDTreeDirArrowExpandable = '▶︎'
-let g:NERDTreeDirArrowCollapsible = '▼'
-autocmd BufEnter * if bufname('#') =~# "^NERD_tree_" | b# | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let NERDTreeShowHidden=1
-let NERDTreeMouseMode=2
 
 "
 " Ranger
 
-let g:NERDTreeHijackNetrw = 0 " add this line if you use NERDTree
 let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
 let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
 let g:ranger_map_keys = 0
