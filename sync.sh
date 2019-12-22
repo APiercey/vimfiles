@@ -1,6 +1,6 @@
-mkdir ~/.local
-mkdir ~/.config
-mkdir ~/.local/share/nvim
+mkdir -p ~/.local
+mkdir -p ~/.config
+mkdir -p ~/.local/share/nvim
 
 (ln -sf ~/vimfiles/.vim ~/)
 (ln -sf ~/vimfiles/.config/coc ~/.config)
