@@ -25,6 +25,8 @@ syntax on
 highlight Comment cterm=italic
 highlight Comment gui=italic
 
+au TermOpen * setlocal nonumber norelativenumber
+
 autocmd FileType ruby setlocal shiftwidth=2 tabstop=2
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 

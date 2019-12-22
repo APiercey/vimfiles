@@ -21,7 +21,7 @@ endfunction
 nmap <leader>rn <Plug>(coc-rename)
 
 " Sometimes it's hard time fine the right root
-autocmd FileType elixir let b:coc_root_patterns = ['source/mix.exs', 'mix.exs']
+autocmd FileType elixir let b:coc_root_patterns = ['source/mix.exs', 'mix.exs', '*/mix.exs']
 autocmd FileType ruby let b:coc_root_patterns = ['source/Gemfile', 'Gemfile']
 
 " Using CocList
