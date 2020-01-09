@@ -11,3 +11,4 @@
 .config/coc/snippets-mru
 .config/coc/extensions/node_modules
 .config/nvim/after/*
+.config/coc/history.json
