@@ -3,12 +3,11 @@
 .local/share/nvim/swap/*
 .local/share/nvim/log
 .local/share/nvim/shada/main.shada
-.config/coc/*.json
 .config/nvim/.netrwhist
 .vim/plugged/
 .config/coc/commands
 .config/coc/lists
 .config/coc/mru
 .config/coc/snippets-mru
+.config/coc/extensions/node_modules
 .config/nvim/after/*
-.config/coc/extensions/db.json
