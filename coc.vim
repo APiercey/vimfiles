@@ -1,3 +1,6 @@
+" Install extensions 
+let g:coc_global_extensions = ['coc-marketplace', 'coc-snippets', 'coc-solargraph', 'coc-elixir', 'coc-rls', 'coc-json']
+
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
