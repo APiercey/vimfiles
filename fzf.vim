@@ -8,6 +8,13 @@ command! -bang -nargs=* Rg
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
 
+command! -bang -nargs=* RgCurrentWord
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(expand('<cword>')), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
 command! -bang -nargs=? -complete=dir GFiles
   \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview('up:80%'), <bang>0)
 
@@ -47,6 +54,7 @@ function! FZFFileOpen()
 endfunction
 
 nnoremap <silent> <C-f> :call FZFOpen(':Rg!')<CR>
+nnoremap <silent> gs :call FZFOpen(':RgCurrentWord!')<CR>
 nnoremap <silent> <C-s> :call FZFOpen(':Snippets')<CR>
 nnoremap <silent> <C-p> :call FZFFileOpen()<CR>
 nnoremap zp :call FZFFileOpen()<CR>
