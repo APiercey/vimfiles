@@ -3,7 +3,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'itchyny/lightline.vim'
   Plug 'sheerun/vim-polyglot'
   Plug 'mattreduce/vim-mix', { 'for': 'elixir' }
-  Plug '/usr/local/opt/fzf'
+  Plug '~/.fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
