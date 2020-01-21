@@ -1,25 +1,18 @@
-let $FZF_PREVIEW_COMMAND="bat --color=always --theme=OneHalfDark --style=header,changes --line-range :300 {}"
+let $FZF_PREVIEW_COMMAND="bat --color=always --theme=OneHalfDark --style=changes --line-range :300 {}"
 let g:fzf_layout = { 'down': '~80%' }
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
-
-command! -bang -nargs=* RgCurrentWord
-  \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(expand('<cword>')), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0 ? fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'up:60%')
+  \           : fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}, 'right:50%:hidden', '?'),
   \   <bang>0)
 
 command! -bang -nargs=? -complete=dir GFiles
   \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview('up:80%'), <bang>0)
 
 command! -bang Colors
-  \ call fzf#vim#colors({}, <bang>0)
+  \ call fzf#vim#colors(fzf#vim#with_preview('up:60%:hidden'), <bang>0)
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
@@ -36,7 +29,13 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let spec = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  call fzf#vim#grep(initial_command, 1, fzf#vim#with_preview(spec), a:fullscreen)
+endfunction
 
 function! FZFOpen(command_str)
   if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
@@ -54,7 +53,7 @@ function! FZFFileOpen()
 endfunction
 
 nnoremap <silent> <C-f> :call FZFOpen(':Rg!')<CR>
-nnoremap <silent> gs :call FZFOpen(':RgCurrentWord!')<CR>
+nnoremap <silent> gs :call FZFOpen(':Rg! ' . expand('<cword>'))<CR>
 nnoremap <silent> <C-s> :call FZFOpen(':Snippets')<CR>
 nnoremap <silent> <C-p> :call FZFFileOpen()<CR>
 nnoremap zp :call FZFFileOpen()<CR>
