@@ -9,9 +9,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'jiangmiao/auto-pairs'
   Plug 'ruanyl/vim-gh-line'
   Plug 'francoiscabrol/ranger.vim'
-  Plug 'rbgrouleff/bclose.vim'
 
-  Plug 'nanotech/jellybeans.vim'
+  Plug 'nanotech/jellybeans.vim' " Consider switching to this themes everywhere
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   Plug 'tpope/vim-endwise'
