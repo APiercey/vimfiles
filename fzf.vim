@@ -38,9 +38,6 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 function! FZFOpen(command_str)
-  if (expand('%') =~# 'NERD_tree' && winnr('$') > 1)
-    exe "normal! \<c-w>\<c-w>"
-  endif
   exe 'normal! ' . a:command_str . "\<cr>"
 endfunction
 
