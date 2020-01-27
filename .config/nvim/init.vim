@@ -19,6 +19,7 @@ set synmaxcol=9999
 set clipboard=unnamedplus
 set so=3
 set lazyredraw
+set tags=tags
 
 syntax on
 

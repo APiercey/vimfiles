@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'honza/vim-snippets'
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-repeat'
+  Plug 'tpope/vim-bundler'
   
   Plug 'terryma/vim-expand-region'
   Plug 'maxbrunsfeld/vim-yankstack'
