@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-surround'
   Plug 'jiangmiao/auto-pairs'
   Plug 'ruanyl/vim-gh-line'
+  Plug 'rbgrouleff/bclose.vim'
   Plug 'francoiscabrol/ranger.vim'
 
   Plug 'nanotech/jellybeans.vim' " Consider switching to this themes everywhere
