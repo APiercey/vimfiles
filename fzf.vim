@@ -14,6 +14,19 @@ command! -bang -nargs=? -complete=dir GFiles
 command! -bang Colors
   \ call fzf#vim#colors(fzf#vim#with_preview('up:60%:hidden'), <bang>0)
 
+function! Bufs()
+  redir => list
+  silent ls
+  redir END
+  return split(list, "\n")
+endfunction
+
+command! BuffersDelete call fzf#run(fzf#wrap({
+  \ 'source': Bufs(),
+  \ 'sink*': { lines -> execute('bwipeout '.join(map(lines, {_, line -> split(line)[0]}))) },
+  \ 'options': '--multi --reverse --bind ctrl-a:select-all+accept'
+\ }))
+
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
