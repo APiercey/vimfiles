@@ -22,6 +22,7 @@ let g:ale_fixers.rust = ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']
 let g:ale_fixers.typescript = ['tslint', 'eslint']
 
 let g:ale_ruby_rubocop_executable = 'bundle'
-let g:ale_linters.ruby  = ['rubocop']
+let g:ale_ruby_sorbet_executable = 'bundle'
+let g:ale_linters.ruby  = ['rubocop', 'sorbet']
 let g:ale_fixers.ruby = ['rubocop', 'trim_whitespace', 'remove_trailing_lines']
 
