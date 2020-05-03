@@ -12,6 +12,9 @@ let g:airline#extensions#ale#enabled = 1
 let g:ale_linters = {}
 let g:ale_fixers = {}
 
+let g:ale_linters.clojure = []
+let g:ale_fixers.clojure = []
+
 let g:ale_elixir_elixir_ls_release = $ELIXIR_LS 
 let g:ale_elixir_credo_strict = 1
 let g:ale_linters.elixir = ['credo']
