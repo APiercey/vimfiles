@@ -126,6 +126,7 @@ call yankstack#setup()
 nmap Y y$
 nmap [p <Plug>yankstack_substitute_older_paste
 nmap ]p <Plug>yankstack_substitute_newer_paste
+nmap <C-d> :qa! <CR>
 " I gotta find a new mapping for this
 nnoremap <NL> i<CR><ESC> 
 nnoremap <tab>   <c-w>w
