@@ -33,11 +33,13 @@ autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 
 filetype plugin on
 
+so ~/vimfiles/ale.vim 
 so ~/vimfiles/plugins.vim
 so ~/vimfiles/fzf.vim 
-so ~/vimfiles/coc.vim 
-so ~/vimfiles/ale.vim 
+" so ~/vimfiles/coc.vim 
 so ~/vimfiles/text_mode.vim
+
+" let g:deoplete#enable_at_startup = 1
 
 " 
 " Vimwiki
