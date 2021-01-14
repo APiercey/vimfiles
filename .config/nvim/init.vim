@@ -36,7 +36,7 @@ filetype plugin on
 so ~/vimfiles/ale.vim 
 so ~/vimfiles/plugins.vim
 so ~/vimfiles/fzf.vim 
-" so ~/vimfiles/coc.vim 
+so ~/vimfiles/coc.vim 
 so ~/vimfiles/text_mode.vim
 
 " let g:deoplete#enable_at_startup = 1

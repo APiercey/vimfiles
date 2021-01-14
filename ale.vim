@@ -24,7 +24,13 @@ let g:ale_fixers.cpp = ['clang-format']
 
 let g:ale_elixir_elixir_ls_release = $ELIXIR_LS 
 let g:ale_elixir_credo_strict = 1
-let g:ale_linters.elixir = ['credo', 'elixir-ls']
+" let g:ale_elixir_elixir_ls_config = {
+"                                   \   'elixirLS': {
+"                                   \     'dialyzerEnabled': v:false,
+"                                   \   },
+"                                   \ }
+" let g:ale_linters.elixir = ['credo', 'elixir-ls']
+let g:ale_linters.elixir = ['credo']
 let g:ale_fixers.elixir = ['mix_format']
 
 let g:ale_fixers.rust = ['rustfmt', 'trim_whitespace', 'remove_trailing_lines']
@@ -33,12 +39,13 @@ let g:ale_fixers.typescript = ['tslint', 'eslint']
 
 let g:ale_ruby_rubocop_executable = 'bundle'
 let g:ale_ruby_sorbet_executable = 'bundle'
-let g:ale_linters.ruby  = ['rubocop', 'sorbet', 'solargraph']
+" let g:ale_linters.ruby  = ['rubocop', 'solargraph']
+let g:ale_linters.ruby  = ['rubocop']
 let g:ale_fixers.ruby = ['rubocop', 'trim_whitespace', 'remove_trailing_lines']
 
-nmap <silent> gd :ALEGoToDefinition<CR>
-nmap <silent> gy :ALEGoToTypeDefinition<CR>
-nmap <silent> gr :ALEFindReferences<CR>
+" nmap <silent> gd :ALEGoToDefinition<CR>
+" nmap <silent> gy :ALEGoToTypeDefinition<CR>
+" nmap <silent> gr :ALEFindReferences<CR>
 
-nmap <silent> [g :ale_previous_wrap<CR>
-nmap <silent> ]g :ale_next_wrap<CR>
+" nmap <silent> [g :ale_previous_wrap<CR>
+" nmap <silent> ]g :ale_next_wrap<CR>

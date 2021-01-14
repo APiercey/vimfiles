@@ -19,8 +19,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'haya14busa/incsearch.vim'
   Plug 'haya14busa/incsearch-fuzzy.vim'
   Plug 'haya14busa/incsearch-easymotion.vim'
-  Plug 'SirVer/ultisnips'
-  Plug 'honza/vim-snippets'
+  " Plug 'SirVer/ultisnips'
+  " Plug 'honza/vim-snippets'
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-bundler'
@@ -39,6 +39,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'yegappan/greplace'
   Plug 'christoomey/vim-tmux-navigator'
   " Plug 'Shougo/deoplete.nvim'
-  " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end() 
 
