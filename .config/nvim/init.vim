@@ -138,23 +138,24 @@ map z/ <Plug>(incsearch-easymotion-/)
 map z? <Plug>(incsearch-easymotion-?)
 map zg/ <Plug>(incsearch-easymotion-stay)
 noremap <silent><expr> <Space>/ incsearch#go(<SID>config_easyfuzzymotion())
-"
-" FUGITIVE
-map <Leader>gs :Gstatus<CR>
 
-"
-" Ranger
+lua << EOF
+-- FUGITIVE
+vim.api.nvim_set_keymap('', '<Leader>gs', ':Git<CR>', { noremap = true, silent = true })
 
-let g:ranger_replace_netrw = 1 " open ranger when vim open a directory
-let g:ranger_command_override = 'ranger --cmd "set show_hidden=true"'
-let g:ranger_map_keys = 0
-nmap - :Ranger<CR>
-" GitGutter
+-- Ranger
+vim.g.ranger_replace_netrw = 1 -- open ranger when vim open a directory
+vim.g.ranger_command_override = 'ranger --cmd "set show_hidden=true"'
+vim.g.ranger_map_keys = 0
 
-let g:gitgutter_sign_added = '▎'
-let g:gitgutter_sign_modified ='▎'
-let g:gitgutter_sign_removed = '▎'
-let g:gitgutter_sign_removed_first_line = '▎'
-let g:gitgutter_sign_modified_removed   = '▎—'
-let g:gitgutter_max_signs = 500
+vim.api.nvim_set_keymap('n', '-', ':Ranger<CR>', { noremap = true, silent = true })
+
+-- GitGutter
+vim.g.gitgutter_sign_added = '▎'
+vim.g.gitgutter_sign_modified ='▎'
+vim.g.gitgutter_sign_removed = '▎'
+vim.g.gitgutter_sign_removed_first_line = '▎'
+vim.g.gitgutter_sign_modified_removed   = '▎—'
+vim.g.gitgutter_max_signs = 500
+EOF
 
