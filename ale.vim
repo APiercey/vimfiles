@@ -43,6 +43,9 @@ let g:ale_ruby_sorbet_executable = 'bundle'
 let g:ale_linters.ruby  = ['rubocop']
 let g:ale_fixers.ruby = ['rubocop', 'trim_whitespace', 'remove_trailing_lines']
 
+
+let g:ale_linters.dart = []
+let g:ale_fixers.dart = ['dartfmt', 'remove_trailing_lines', 'trim_whitespace']
 " nmap <silent> gd :ALEGoToDefinition<CR>
 " nmap <silent> gy :ALEGoToTypeDefinition<CR>
 " nmap <silent> gr :ALEFindReferences<CR>

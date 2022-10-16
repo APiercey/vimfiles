@@ -6,10 +6,11 @@ call plug#begin('~/.vim/plugged')
   Plug '~/.fzf'
   Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-surround'
-  Plug 'jiangmiao/auto-pairs'
+  Plug 'rstacruz/vim-closer'
   Plug 'ruanyl/vim-gh-line'
   Plug 'rbgrouleff/bclose.vim'
   Plug 'francoiscabrol/ranger.vim'
+  Plug 'sebdah/vim-delve'
 
   Plug 'nanotech/jellybeans.vim' " Consider switching to this themes everywhere
   Plug 'junegunn/goyo.vim'
@@ -24,6 +25,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-obsession'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-bundler'
+  Plug 'vim-scripts/blockle.vim'
   
   Plug 'terryma/vim-expand-region'
   Plug 'maxbrunsfeld/vim-yankstack'
