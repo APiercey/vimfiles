@@ -2,7 +2,7 @@
   "diagnostic.enable": true,
   "diagnostic.signOffset": 9999999,
   "elixirLS.dialyzerEnabled": false,
-  "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+  // "elixir.pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
   "diagnostic.displayByAle": true,
   "solargraph.diagnostics": false,
   "solargraph.checkGemVersion": false,
